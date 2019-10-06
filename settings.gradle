@@ -1,4 +1,4 @@
 include 'abstract-factory'
 include 'builder'
-include 'inheritance'
+include 'singleton'
 
