@@ -1,7 +1,9 @@
 package com.cfhayes.patterns.builder;
 
 import java.math.BigDecimal;
+import lombok.ToString;
 
+@ToString
 public class BankAccount {
 
     private long accountNumber;
@@ -78,13 +80,4 @@ public class BankAccount {
         this.accountBalance = accountBalance;
     }
 
-    @Override
-    public String toString() {
-        return "BankAccount{" +
-                "accountNumber=" + accountNumber +
-                ", ownerName='" + ownerName + '\'' +
-                ", ownerAddress='" + ownerAddress + '\'' +
-                ", accountBalance=" + accountBalance +
-                '}';
-    }
 }
