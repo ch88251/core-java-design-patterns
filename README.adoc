@@ -1,5 +1,5 @@
-= Document Title
-Doc Writer <doc@example.com>
+= Java Design Patterns
+
 :doctype: book
 :reproducible:
 //:source-highlighter: coderay
@@ -8,24 +8,23 @@ Doc Writer <doc@example.com>
 // Uncomment next line to set page size (default is A4)
 //:pdf-page-size: Letter
 
-A simple http://asciidoc.org[AsciiDoc] document.
-
 == Introduction
 
-A paragraph followed by an unordered list{empty}footnote:[AsciiDoc supports unordered, ordered, and description lists.] with square bullets.footnote:[You may choose from square, disc, and circle for the bullet style.]
+Examples of the 23 Gang Of Four software design patterns implemented in Java.
 
 [square]
-* item 1
-* item 2
+* Abstract Factory
+* Adapter
+* Bridge
+* link:builder/README.adoc[Builder]
+* Chain Of Responsibility
+* Composite
+* Command
+* Decorator
+* Factory Method
+* Prototype
+* Singleton
+* Strategy
+* Template Method
+* Visitor
 
-Here's how you say "`Hello, World!`" in Prawn:
-
-.Create a basic PDF document using Prawn
-[source,ruby]
-----
-require 'prawn'
-
-Prawn::Document.generate 'example.pdf' do
-  text 'Hello, World!'
-end
-----
