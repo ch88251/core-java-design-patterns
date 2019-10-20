@@ -13,7 +13,7 @@
 Examples of the 23 Gang Of Four software design patterns implemented in Java.
 
 [square]
-* Abstract Factory
+* link:builder/README.adoc[Abstract Factory]
 * Adapter
 * Bridge
 * link:builder/README.adoc[Builder]
@@ -23,7 +23,7 @@ Examples of the 23 Gang Of Four software design patterns implemented in Java.
 * Decorator
 * Factory Method
 * Prototype
-* Singleton
+* link:builder/README.adoc[Singleton]
 * Strategy
 * Template Method
 * Visitor
