@@ -1,6 +1,6 @@
 package com.cfhayes.patterns.abstractfactory;
 
-//AbstractFactory
+
 public abstract class CreditCardFactory {
 
 	public static CreditCardFactory getCreditCardFactory(int creditScore) {
