@@ -1,0 +1,28 @@
+@startuml
+
+interface Cloneable {
+  + clone() : Object
+}
+
+class Person {
+  - name : String
+  - income : Integer
+  - country : Country
+  - city : City
+}
+
+class Country {
+  - name : String
+}
+
+class City {
+  - name : String
+}
+
+Person .up.|> Cloneable
+Country .up.|> Cloneable
+City .up.|> Cloneable
+Person o-right-> Country
+Person o--> City
+
+@enduml
