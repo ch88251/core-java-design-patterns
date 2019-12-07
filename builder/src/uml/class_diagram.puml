@@ -1,0 +1,30 @@
+@startuml
+
+class LunchOrder {
+  - bread : String
+  - condiments : String
+  - dressing : String
+  - meat : String
+  - LunchOrder()
+  + getBread() : String
+  + getCondiments() : String
+  + getDressing() : String
+  + getMeat() : String
+}
+
+class LunchOrderBuilder {
+  - bread : String
+  - condiments : String
+  - dressing : String
+  - meat : String
+  + LunchOrderBuilder()
+  + withBread(value : String) : LunchOrderBuilder
+  + withCondiments(value : String) : LunchOrderBuilder
+  + withDressing(value : String) : LunchOrderBuilder
+  + withMeat(value : String) : LunchOrderBuilder
+  + build() : LunchOrder
+}
+
+LunchOrder .right.> LunchOrderBuilder : uses
+
+@enduml
