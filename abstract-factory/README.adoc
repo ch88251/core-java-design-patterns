@@ -1,4 +1,4 @@
 = Abstract Factory
 
 == Class Diagram
-image::src/uml/abstract_factory.jpeg[width=800]
+image::src/uml/class_diagram.png[width=800]
