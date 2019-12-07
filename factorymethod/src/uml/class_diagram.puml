@@ -1,0 +1,24 @@
+@startuml
+
+class BoardGame {
+  + createGame() : void
+}
+
+class CardGame {
+  + createGame() : void
+}
+
+abstract class Game {
+  + {abstract} createGame() : void
+}
+
+class GameFactory {
+  + createGame(type)
+}
+
+BoardGame -up-|> Game
+CardGame -up-|> Game
+
+GameFactory -left-> Game : create
+
+@enduml

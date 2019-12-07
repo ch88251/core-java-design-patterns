@@ -1,4 +1,4 @@
-package com.cfhayes.patterns.prototype;
+package com.cfhayes.patterns.factorymethod;
 
 import lombok.*;
 

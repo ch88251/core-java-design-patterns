@@ -1,4 +1,4 @@
-package com.cfhayes.patterns.prototype;
+package com.cfhayes.patterns.factorymethod;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
