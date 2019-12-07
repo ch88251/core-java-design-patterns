@@ -12,7 +12,7 @@
 
 Examples of the 23 Gang Of Four software design patterns implemented in Java.
 
-link:builder/README.adoc[Builder]
+link:builder[Builder]
 
 link:singleton/README.adoc[Singleton]
 
