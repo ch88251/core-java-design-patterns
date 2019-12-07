@@ -3,54 +3,52 @@ package com.cfhayes.patterns.builder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PatternTests {
 
     @Test
-    @DisplayName("Create bank account with initial balance of $500.00 dollars")
-    public void createBankAccountScenario1() {
-        BankAccount bankAccount = new BankAccount.Builder(500L)
-                .withOwnerName("John Doe")
-                .withOwnerAddress("123 Fake Street")
-                .withOpeningBalance(Double.valueOf(500.00))
-                .build();
+    @DisplayName("Create lunch order with wheat bread and turkey but no condiments or dressings")
+    public void createLunchOrderScenario1() {
+        LunchOrder.Builder lunchOrderBuilder = new LunchOrder.Builder();
+        LunchOrder lunchOrder = lunchOrderBuilder
+                .withBread("Wheat")
+                .withMeat("Turkey").build();
 
-        assertEquals("John Doe", bankAccount.getOwnerName(), "Wrong owner name!");
-        assertEquals("123 Fake Street", bankAccount.getOwnerAddress(), "Wrong owner address!");
-        assertEquals(500, bankAccount.getAccountBalance(), "Wrong account balance!");
-
+        assertEquals("Wheat", lunchOrder.getBread());
+        assertEquals(null, lunchOrder.getCondiments());
+        assertEquals(null, lunchOrder.getDressing());
+        assertEquals("Turkey", lunchOrder.getMeat());
     }
 
     @Test
-    @DisplayName("Create bank account with initial balance of $500.01 dollars")
-    public void createBankAccountScenario2() {
-        BankAccount bankAccount = new BankAccount.Builder(1001L)
-                .withOwnerName("John Doe")
-                .withOwnerAddress("123 Fake Street")
-                .withOpeningBalance(Double.valueOf(500.01))
-                .build();
+    @DisplayName("Create lunch order with wheat bread, ketchup and turkey but no dressings")
+    public void createLunchOrderScenario2() {
+        LunchOrder.Builder lunchOrderBuilder = new LunchOrder.Builder();
+        LunchOrder lunchOrder = lunchOrderBuilder
+                .withBread("Wheat")
+                .withCondiments("Ketchup")
+                .withMeat("Turkey").build();
 
-        assertEquals("John Doe", bankAccount.getOwnerName(), "Wrong owner name!");
-        assertEquals("123 Fake Street", bankAccount.getOwnerAddress(), "Wrong owner address!");
-        assertEquals(Double.valueOf("500.01"), bankAccount.getAccountBalance(), "Wrong account balance!");
-
+        assertEquals("Wheat", lunchOrder.getBread());
+        assertEquals("Ketchup", lunchOrder.getCondiments());
+        assertEquals(null, lunchOrder.getDressing());
+        assertEquals("Turkey", lunchOrder.getMeat());
     }
 
     @Test
-    @DisplayName("Create bank account with initial balance of $600.55 dollars")
-    public void createBankAccountScenario3() {
-        BankAccount bankAccount = new BankAccount.Builder(1001L)
-                .withOwnerName("John Doe")
-                .withOwnerAddress("123 Fake Street")
-                .withOpeningBalance(Double.valueOf(600.55))
-                .build();
+    @DisplayName("Create lunch order with wheat bread, ketchup, lettuce and turkey")
+    public void createLunchOrderScenario3() {
+        LunchOrder.Builder lunchOrderBuilder = new LunchOrder.Builder();
+        LunchOrder lunchOrder = lunchOrderBuilder
+                .withBread("Wheat")
+                .withCondiments("Ketchup")
+                .withDressing("Lettuce")
+                .withMeat("Turkey").build();
 
-        assertEquals("John Doe", bankAccount.getOwnerName(), "Wrong owner name!");
-        assertEquals("123 Fake Street", bankAccount.getOwnerAddress(), "Wrong owner address!");
-        assertEquals(600.55, bankAccount.getAccountBalance(), "Wrong account balance!");
-
+        assertEquals("Wheat", lunchOrder.getBread());
+        assertEquals("Ketchup", lunchOrder.getCondiments());
+        assertEquals("Lettuce", lunchOrder.getDressing());
+        assertEquals("Turkey", lunchOrder.getMeat());
     }
 }
