@@ -1,4 +1,0 @@
-= Factory Method Design Pattern
-
-== Class Diagram
-image::src/uml/class_diagram.png[width=300]

@@ -1,7 +1,5 @@
 include 'abstract-factory'
 include 'builder'
 include 'singleton'
-include 'prototype'
-include 'factorymethod'
 include 'adapter'
 
