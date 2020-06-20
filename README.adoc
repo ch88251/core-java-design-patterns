@@ -5,8 +5,7 @@
 //:source-highlighter: coderay
 :source-highlighter: rouge
 :listing-caption: Listing
-// Uncomment next line to set page size (default is A4)
-//:pdf-page-size: Letter
+:pdf-page-size: Letter
 
 == Introduction
 
